@@ -5,10 +5,6 @@ RaktSetu is a blood donation and blood-management platform designed to connect d
 ## Live Application
 
 - Live app: https://raktsetu.hatchable.site
-- Project console: https://hatchable.com/console/projects/raktsetu
-
-> **Note:** The current Hatchable project is configured with personal visibility. For public visitors to open the live app without joining the project, change **Visibility → Public** in the Hatchable console.
-
 ## Problem
 
 During urgent blood requirements, patients and hospitals may struggle to identify compatible donors, locate available inventory, and track responses. RaktSetu brings these activities into one platform with role-based portals and blood-group compatibility matching.
