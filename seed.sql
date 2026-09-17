@@ -1,0 +1,1 @@
+INSERT INTO profiles (name,email,role,blood_group,city,available) SELECT 'Aarav Sharma','aarav.demo@raktsetu.app','donor','O+','Delhi',true WHERE NOT EXISTS (SELECT 1 FROM profiles WHERE email='aarav.demo@raktsetu.app')

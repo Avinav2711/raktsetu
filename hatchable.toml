@@ -1,0 +1,13 @@
+[auth]
+enabled = true
+providers = ["email"]
+login_path = "/login"
+hosted_login = true
+
+[db.tables.user_profiles]
+read = "own"
+write = "own"
+
+[db.tables.user_notifications]
+read = "own"
+write = "own"

@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS inventory_transactions (id UUID PRIMARY KEY DEFAULT gen_random_uuid(), inventory_id UUID NOT NULL REFERENCES inventory(id), action TEXT NOT NULL, units_change INTEGER NOT NULL, previous_units INTEGER NOT NULL, new_units INTEGER NOT NULL, reason TEXT, actor_user_id TEXT, created_at TIMESTAMPTZ NOT NULL DEFAULT now())

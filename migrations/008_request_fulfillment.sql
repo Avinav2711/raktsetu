@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS blood_request_fulfillments (id UUID PRIMARY KEY DEFAULT gen_random_uuid(), request_id UUID NOT NULL UNIQUE REFERENCES blood_requests(id) ON DELETE CASCADE, inventory_id UUID NOT NULL REFERENCES inventory(id), units INTEGER NOT NULL, facility TEXT NOT NULL, city TEXT NOT NULL, fulfilled_at TIMESTAMPTZ NOT NULL DEFAULT now())

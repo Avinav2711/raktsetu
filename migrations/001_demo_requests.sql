@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS demo_requests (id UUID PRIMARY KEY DEFAULT gen_random_uuid(), status TEXT NOT NULL DEFAULT 'active', created_at TIMESTAMPTZ NOT NULL DEFAULT now())

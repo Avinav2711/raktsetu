@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS blood_requests (id UUID PRIMARY KEY DEFAULT gen_random_uuid(), requester_name TEXT NOT NULL, blood_group TEXT NOT NULL, units INTEGER NOT NULL DEFAULT 1, facility TEXT NOT NULL, city TEXT NOT NULL, urgency TEXT NOT NULL DEFAULT 'Urgent', status TEXT NOT NULL DEFAULT 'Open', created_at TIMESTAMPTZ NOT NULL DEFAULT now())

@@ -1,0 +1,4 @@
+import { db } from 'hatchable';
+export const access = "public";
+export const methods = ["GET","POST"];
+export default async function(req,res){if(req.method==='GET'){const {rows}=await db.query("SELECT id,name,email,role,blood_group,city,available,created_at FROM profiles ORDER BY created_at DESC LIMIT 100");return res.json({profiles:rows});}const b=req.body||{};if(!b.name||!b.email||!b.role)return res.status(400).json({error:'Name, email and role are required'});const {rows}=await db.query("INSERT INTO profiles (name,email,role,blood_group,city,available) VALUES ($1,$2,$3,$4,$5,$6) RETURNING id,name,email,role,blood_group,city,available",[b.name,b.email,b.role,b.bloodGroup||null,b.city||null,b.available!==false]);res.status(201).json({profile:rows[0]});}

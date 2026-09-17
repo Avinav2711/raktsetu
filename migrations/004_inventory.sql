@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS inventory (id UUID PRIMARY KEY DEFAULT gen_random_uuid(), facility TEXT NOT NULL, city TEXT NOT NULL, blood_group TEXT NOT NULL, units INTEGER NOT NULL DEFAULT 0, status TEXT NOT NULL DEFAULT 'Available', updated_at TIMESTAMPTZ NOT NULL DEFAULT now())
